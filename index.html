@@ -10,54 +10,47 @@
 
 <header class="hero">
   <h1>SZACUN SMP</h1>
-  <p>Serwer Minecraft SMP • Klimat • Społeczność</p>
+  <p id="server-status">🔄 Sprawdzanie statusu...</p>
 </header>
 
-<nav>
-  <a href="#home">Strona główna</a>
-  <a href="#about">O serwerze</a>
-  <a href="#rules">Regulamin</a>
-  <a href="#join">Dołącz</a>
-</nav>
+<!-- ZAKŁADKI -->
+<div class="tabs">
+  <button class="tab active" onclick="showTab('home')">Strona główna ✅</button>
+  <button class="tab" onclick="showTab('rules')">Regulamin 💚</button>
+  <button class="tab" onclick="showTab('admin')">Administracja 😎</button>
+  <button class="tab" onclick="showTab('map')">Mapa 🗺️</button>
+  <button class="tab" onclick="showTab('join')">Jak dołączyć 🚀</button>
+  <button class="tab" onclick="showTab('discord')">Discord 💜</button>
+  <button class="tab" onclick="showTab('support')">Wsparcie 🧡</button>
+</div>
 
-<section id="home">
+<!-- SEKCJE -->
+<div class="content">
+
+<section id="home" class="tab-content active">
   <h2>Witaj na SZACUN SMP</h2>
-  <p>
-    SZACUN SMP to serwer Minecraft stworzony z myślą o graczach,
-    którzy lubią lifesteal i trochę bijatyki.
-  </p>
+  <p>Serwer SMP oparty na zasadach, klimacie i szacunku.</p>
 </section>
 
-<section id="about">
-  <h2>O serwerze</h2>
-  <ul>
-    <li>✔ Lifesteal Multiplayer</li>
-    <li>✔ Aktywna administracja</li>
-    <li>✔ Brak pay-to-win</li>
-    <li>✔ Właściciel aktywny</li>
-    <li>✔ Rozgrywka</li>
-  </ul>
-</section>
-
-<section id="rules">
+<section id="rules" class="tab-content">
   <h2>Regulamin</h2>
   <ol>
-    <li>Zakaz cheatów, x-ray i exploitów</li>
-    <li>Szanuj innych graczy</li>
-    <li>Zakaz cwordow itp</li>
-    <li>Administracja ma zawsze ostatnie słowo</li>
+    <li>Zakaz cheatów i exploitów</li>
+    <li>Szanuj graczy</li>
+    <li>Nakaz ciągłej gry</li>
   </ol>
 </section>
 
-<section id="join">
-  <h2>Dołącz do nas</h2>
-  <p><strong>IP serwera:</strong> 5.252.100.184:25607</p>
-  <p><strong>Discord:</strong> discord.gg/H7v4BmM3ac</p>
+<section id="admin" class="tab-content">
+  <h2>Administracja</h2>
+  <p>Właściciel: Admin</p>
+  <p>Moderatorzy: Mod1, Mod2</p>
 </section>
 
-<footer>
-  <p>© 2025 SZACUN SMP</p>
-</footer>
+<section id="map" class="tab-content">
+  <h2>Mapa</h2>
+  <p>Mapa dynmap: wkrótce</p>
+</section>
 
-</body>
-</html>
+<section id="join" class="tab-content">
+  <h2>Jak dołączyć
