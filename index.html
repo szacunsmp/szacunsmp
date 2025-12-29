@@ -5,48 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SZACUN SMP - Krwawe Dziedzictwo</title>
     <style>
-        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; }
+        body { 
+            background-color: #0b0c10; 
+            color: #c5c6c7; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+        }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 60px 0; border-bottom: 2px solid #45a29e; }
-        h1 { color: #66fcf1; font-size: 3.5rem; text-transform: uppercase; letter-spacing: 8px; margin: 0; }
-        .blood { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+        
+        header { 
+            text-align: center; 
+            padding: 40px 0; 
+            border-bottom: 2px solid #45a29e; 
+        }
 
-        .section { padding: 50px 0; border-bottom: 1px solid #1f2833; }
-        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        /* LOGO */
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
 
-        .btn-group { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 40px; }
+        h1 { 
+            color: #66fcf1; 
+            font-size: 2.5rem; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            margin: 0; 
+            display: none; /* Ukryte, bo masz logo z napisem */
+        }
+
+        /* GRUPA PRZYCISKÓW - MNIEJSZE I W LINII */
+        .btn-group { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            flex-wrap: wrap; 
+            margin-top: 30px; 
+        }
+        
         .btn-base { 
             display: inline-block; 
             color: white; 
-            padding: 15px 25px; 
+            padding: 10px 18px; 
             text-decoration: none; 
             font-weight: bold; 
-            border-radius: 5px; 
-            transition: all 0.3s; 
+            font-size: 0.85rem; 
+            border-radius: 4px; 
+            transition: all 0.3s ease; 
             text-align: center;
-            min-width: 160px;
             text-transform: uppercase;
+            min-width: 110px;
         }
-        .btn-base:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        
+        .btn-red { background-color: #ff0000; border: 1px solid #b30000; }
+        .btn-blue { background-color: #007bff; border: 1px solid #0056b3; }
+        
+        .btn-base:hover { 
+            transform: translateY(-2px); 
+            filter: brightness(1.2); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+        }
 
-        .btn-red { background-color: #ff0000; border: 2px solid #b30000; }
-        .btn-blue { background-color: #007bff; border: 2px solid #0056b3; font-size: 1.3rem; padding: 20px 40px; }
-        .btn-soon { background-color: #007bff; border: 2px solid #0056b3; opacity: 0.7; cursor: not-allowed; font-size: 0.9rem; }
+        .section { padding: 40px 0; border-bottom: 1px solid #1f2833; }
+        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; }
 
-        .highlight-box { background: rgba(31, 40, 51, 0.5); padding: 25px; border: 1px solid #45a29e; border-radius: 10px; margin-top: 20px; }
-        footer { text-align: center; padding: 50px; font-size: 0.8rem; color: #45a29e; opacity: 0.6; }
+        .highlight-box { 
+            background: rgba(31, 40, 51, 0.5); 
+            padding: 25px; 
+            border: 1px solid #45a29e; 
+            border-radius: 10px; 
+            margin-top: 20px; 
+        }
+
+        code { color: #ff0000; background: #1f2833; padding: 2px 5px; border-radius: 3px; }
+        
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            font-size: 0.8rem; 
+            color: #45a29e; 
+            opacity: 0.6; 
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>SZACUN <span class="blood">SMP</span></h1>
+        <img src="2.png" alt="SZACUN SMP Logo" class="logo">
         <p>W świecie rządzonym przez głód potęgi, tylko najsilniejsi piszą historię.</p>
         
         <div class="btn-group">
             <a href="staff.html" class="btn-base btn-red">STAFF</a>
-            <a href="https://discord.gg/H7v4BmM3ac" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
+            <a href="https://discord.gg/TWOJ-LINK" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
             <a href="regulamin.html" class="btn-base btn-blue">REGULAMIN</a>
             <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA SERWERA</a>
         </div>
@@ -71,4 +125,9 @@
     </div>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj,
+        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
+    </footer>
+</div>
+
+</body>
+</html>
