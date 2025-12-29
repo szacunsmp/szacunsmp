@@ -5,93 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SZACUN SMP - Krwawe Dziedzictwo</title>
     <style>
-        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; }
+        /* CZARNO-CZERWONE TŁO */
+        body { 
+            background: radial-gradient(circle at center, #2b0000 0%, #0b0c10 100%);
+            background-attachment: fixed;
+            color: #c5c6c7; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+        }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 50px 0; border-bottom: 2px solid #45a29e; }
-        h1 { color: #66fcf1; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; margin: 0; }
+        header { text-align: center; padding: 50px 0; border-bottom: 2px solid #ff0000; }
+        
+        /* LOGO */
+        .logo { max-width: 350px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5)); }
+
+        h1 { color: #66fcf1; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; margin: 0; display: none; }
         .blood { color: #ff0000; }
 
-        .section { padding: 40px 0; border-bottom: 1px solid #1f2833; }
+        .section { padding: 40px 0; border-bottom: 1px solid #330000; }
         h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; }
 
-        /* UKŁAD PRZYCISKÓW */
-        .btn-group { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 15px; 
-            flex-wrap: wrap; 
-            margin-top: 30px; 
-        }
-        
+        /* PRZYCISKI */
+        .btn-group { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
         .btn-base { 
             display: inline-block; 
             color: white; 
             padding: 15px 25px; 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 1rem; 
             border-radius: 5px; 
-            transition: transform 0.3s, filter 0.3s; 
+            transition: 0.3s; 
             text-align: center;
             min-width: 160px;
         }
-        
-        .btn-base:hover { transform: scale(1.05); filter: brightness(1.2); }
-
-        /* KOLORY PRZYCISKÓW */
+        .btn-base:hover { transform: scale(1.05); filter: brightness(1.2); box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); }
         .btn-red { background-color: #ff0000; border: 2px solid #b30000; }
-        .btn-blue { background-color: #007bff; border: 2px solid #0056b3; font-size: 1.2rem; padding: 18px 30px; }
+        .btn-blue { background-color: #007bff; border: 2px solid #0056b3; font-size: 1.2rem; }
 
-        .rules { background: #0b0c10; padding: 20px; border: 1px solid #45a29e; }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #45a29e; }
+        .rules { background: rgba(0, 0, 0, 0.6); padding: 20px; border: 1px solid #ff0000; border-radius: 10px; }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #ff0000; }
     </style>
 </head>
 <body>
-
 <div class="container">
     <header>
-        <h1>SZACUN <span class="blood">SMP</span></h1>
+        <img src="2.png" alt="SZACUN SMP" class="logo">
         <p>Graj, walcz, przetrwaj. Żyj na krawędzi, zdobywaj szacunek.</p>
-        
         <div class="btn-group">
             <a href="staff.html" class="btn-base btn-red">STAFF</a>
-            
-            <a href="https://discord.gg/H7v4BmM3ac" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
-            
+            <a href="https://discord.gg/TWOJ-LINK" class="btn-base btn-blue">DOŁĄCZ DO RZEZI</a>
             <a href="http://5.252.100.184:25403" class="btn-base btn-red" target="_blank">MAPA SERWERA</a>
         </div>
     </header>
-
     <div class="section">
         <h2>O Rozgrywce</h2>
         <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
     </div>
-
     <div class="section">
-        <h2>Kodeks Krwi (Regulamin)</h2>
+        <h2>Kodeks Krwi</h2>
         <div class="rules">
-            <p><strong>I. Pakiet Przetrwania:</strong> Twoje serca są walutą.</p>
-            <p><strong>II. Terminologia:</strong> Cheaty to tchórzostwo. Grief jest dozwolony.</p>
-            <p><strong>III. Prawo Silniejszego:</strong> Bierz co chcesz, buduj reputację.</p>
-            <p><strong>IV. Sztuka Wojny:</strong> Każde morderstwo musi mieć powód.</p>
-            <p><strong>V. Wyroki:</strong> Decyzje administracji są ostateczne.</p>
+            <p><strong>I. Serca są walutą.</strong> Strata wszystkich oznacza koniec.</p>
+            <p><strong>II. Brak litości.</strong> Griefing dozwolony, cheaty surowo wzbronione.</p>
         </div>
     </div>
-
-    <div class="section">
-        <h2>Procedura Wstąpienia (Whitelist)</h2>
-        <div class="rules">
-            <p><strong>KROK 1:</strong> Zapoznaj się z kanałem <code>#🩸┇kodeks-krwi</code> na Discordzie.</p>
-            <p><strong>KROK 2:</strong> Otwórz podanie w kategorii <code>FILARY SZACUNU</code>.</p>
-            <p><strong>KROK 3:</strong> Odpowiedz na pytania bota i czekaj na decyzję (do 48h).</p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
-    </footer>
+    <footer>&copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.</footer>
 </div>
-
 </body>
 </html>
