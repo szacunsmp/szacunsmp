@@ -5,103 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - SZACUN SMP</title>
     <style>
-        body { 
-            background-color: #0b0c10; 
-            color: #c5c6c7; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-        }
+        body { background-color: #0b0c10; color: #c5c6c7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; }
         .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        
-        header { 
-            text-align: center; 
-            padding: 40px 0; 
-            border-bottom: 2px solid #45a29e; 
-            margin-bottom: 20px; 
-        }
-        
-        h1 { color: #66fcf1; text-transform: uppercase; letter-spacing: 5px; }
+        header { text-align: center; padding: 40px 0; border-bottom: 2px solid #45a29e; margin-bottom: 20px; }
+        .small-logo { max-width: 120px; height: auto; margin-bottom: 15px; }
+        h1 { color: #66fcf1; text-transform: uppercase; letter-spacing: 5px; margin: 0; }
         .blood { color: #ff0000; text-shadow: 0 0 5px rgba(255,0,0,0.5); }
         
         .hierarchy-section { margin-bottom: 40px; }
-        h2 { 
-            color: #66fcf1; 
-            border-left: 5px solid #ff0000; 
-            padding-left: 15px; 
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            background: rgba(255, 0, 0, 0.05);
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; text-transform: uppercase; font-size: 1.2rem; background: rgba(255, 0, 0, 0.05); padding: 10px; }
 
-        .member-card { 
-            background: #1f2833; 
-            padding: 15px; 
-            margin: 10px 0; 
-            border-radius: 5px; 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            border-right: 3px solid transparent;
-            transition: 0.3s;
-        }
-        .member-card:hover { 
-            background: #252e38; 
-            transform: translateX(5px);
-            border-right-color: #66fcf1;
-        }
+        .member-card { background: #1f2833; padding: 15px; margin: 10px 0; border-radius: 5px; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
+        .member-card:hover { background: #252e38; transform: translateX(5px); }
         
-        /* Kolory pasków bocznych dla hierarchii */
         .rank-top { border-left: 5px solid #ff0000; }
         .rank-high { border-left: 5px solid #007bff; }
         .rank-mid { border-left: 5px solid #6f42c1; }
         .rank-low { border-left: 5px solid #198754; }
 
         .role-icon { width: 35px; height: 35px; border-radius: 50%; flex-shrink: 0; }
-        
         .info strong { font-size: 1.1rem; color: #fff; }
         .info p { margin: 3px 0 0; font-size: 0.85rem; color: #45a29e; font-style: italic; }
         
-        .btn-back { 
-            display: inline-block; 
-            background: transparent; 
-            color: #66fcf1; 
-            padding: 8px 20px; 
-            text-decoration: none; 
-            border: 2px solid #66fcf1; 
-            border-radius: 4px; 
-            margin-bottom: 20px; 
-            font-weight: bold;
-            transition: 0.3s;
-        }
+        .btn-back { display: inline-block; background: transparent; color: #66fcf1; padding: 8px 20px; text-decoration: none; border: 2px solid #66fcf1; border-radius: 4px; margin-bottom: 20px; font-weight: bold; }
         .btn-back:hover { background: #66fcf1; color: #0b0c10; }
     </style>
 </head>
 <body>
-
 <div class="container">
     <header>
-        <a href="index.html" class="btn-back">← POWRÓT DO BRAM</a>
+        <a href="index.html" class="btn-back">← POWRÓT</a>
+        <br>
+        <img src="2.png" alt="Logo" class="small-logo">
         <h1>ELITA <span class="blood">SZACUNU</span></h1>
-        <p>Architekci Twojego przeznaczenia i sędziowie Twoich czynów.</p>
     </header>
 
     <div class="hierarchy-section">
         <h2>I. Władcy Cieni</h2>
         <div class="member-card rank-top">
             <div class="role-icon" style="background:#ff0000"></div>
-            <div class="info">
-                <strong>pokadigleta</strong>
-                <p>Najwyższa potęga. Główny architekt świata.</p>
-            </div>
+            <div class="info"><strong>pokadigleta</strong><p>Najwyższa potęga. Główny architekt świata.</p></div>
         </div>
         <div class="member-card rank-top">
             <div class="role-icon" style="background:#ff0000"></div>
-            <div class="info">
-                <strong>sp0cona_len1q</strong>
-                <p>Oko sprawiedliwości. Władca balansu.</p>
-            </div>
+            <div class="info"><strong>sp0cona_len1q</strong><p>Oko sprawiedliwości. Władca balansu.</p></div>
         </div>
     </div>
 
@@ -109,10 +56,7 @@
         <h2>II. Rada Starszych</h2>
         <div class="member-card rank-high">
             <div class="role-icon" style="background:#007bff"></div>
-            <div class="info">
-                <strong>dojadecie123_70632</strong>
-                <p>Strażnik stabilności i egzekutor prawa królestwa.</p>
-            </div>
+            <div class="info"><strong>dojadecie123_70632</strong><p>Strażnik stabilności i egzekutor prawa królestwa.</p></div>
         </div>
     </div>
 
@@ -120,10 +64,7 @@
         <h2>III. Strażnik Kodeksu</h2>
         <div class="member-card rank-mid">
             <div class="role-icon" style="background:#6f42c1"></div>
-            <div class="info">
-                <strong>kalinekmail</strong>
-                <p>Klucznik bram. To on analizuje Twoją przeszłość i decyduje, czy jesteś godzien otrzymać dostęp do Whitelisty.</p>
-            </div>
+            <div class="info"><strong>kalinekmail</strong><p>Klucznik bram. Analizuje podania i daje dostęp do Whitelisty.</p></div>
         </div>
     </div>
 
@@ -131,14 +72,9 @@
         <h2>IV. Wspólnik</h2>
         <div class="member-card rank-low">
             <div class="role-icon" style="background:#198754"></div>
-            <div class="info">
-                <strong>tycha1515</strong>
-                <p>Zaufany sojusznik w strukturach władzy.</p>
-            </div>
+            <div class="info"><strong>tycha1515</strong><p>Zaufany sojusznik w strukturach władzy.</p></div>
         </div>
     </div>
-
 </div>
-
 </body>
 </html>
