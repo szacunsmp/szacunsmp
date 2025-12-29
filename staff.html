@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - SZACUN SMP</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Motyw dopasowany do strony głównej */
+        body { 
+            background-color: #0b0c10; 
+            color: #c5c6c7; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        header { 
+            text-align: center; 
+            padding: 50px 0; 
+            border-bottom: 2px solid #45a29e; 
+        }
+        
+        h1 { color: #66fcf1; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 3px; }
+        h2 { color: #66fcf1; border-left: 5px solid #ff0000; padding-left: 15px; margin-top: 30px; }
+        .blood { color: #ff0000; }
+
+        /* Style dla rang i użytkowników */
+        .section { padding: 20px 0; border-bottom: 1px solid #1f2833; }
+        .role { 
+            background: #1f2833; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+        }
+        .role-icon { width: 30px; height: 30px; border-radius: 50%; }
+        .description { font-size: 0.85rem; color: #45a29e; font-style: italic; margin-top: 5px; }
+
+        /* Przycisk powrotny */
+        .btn-back {
+            display: inline-block;
+            background: transparent;
+            color: #66fcf1;
+            padding: 10px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #66fcf1;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn-back:hover {
+            background: #66fcf1;
+            color: #0b0c10;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,37 +64,47 @@
     <header>
         <h1>ELITA <span class="blood">SZACUNU</span></h1>
         <p>Oto ci, którzy dzierżą władzę nad losem skazańców.</p>
-        <a href="index.html" class="btn-join" style="padding: 10px 20px; font-size: 1rem;">← POWRÓT</a>
+        <a href="index.html" class="btn-back">← POWRÓT</a>
     </header>
 
     <div class="section">
         <h2>Władcy Cieni</h2>
-        <div class="role"><div class="role-icon" style="background:#ff0000"></div> <strong>pokadigleta</strong></div>
-        <div class="role"><div class="role-icon" style="background:#ff0000"></div> <strong>sp0cona_len1q</strong></div>
-        <p style="font-size: 0.9rem; color: #ff0000;">Najwyższa potęga.</p>
+        <div class="role">
+            <div class="role-icon" style="background:#ff0000"></div>
+            <strong>pokadigleta</strong>
+        </div>
+        <div class="role">
+            <div class="role-icon" style="background:#ff0000"></div>
+            <strong>sp0cona_len1q</strong>
+        </div>
+        <p class="description">Najwyższa potęga.</p>
     </div>
 
     <div class="section">
         <h2>Rada Starszych</h2>
-        <div class="role"><div class="role-icon" style="background:#007bff"></div> <strong>dojadecie123_70632</strong></div>
-        <p style="font-size: 0.9rem; color: #007bff;">Sędziowie i egzekutorzy krwawego prawa.</p>
+        <div class="role">
+            <div class="role-icon" style="background:#007bff"></div>
+            <strong>dojadecie123_70632</strong>
+        </div>
+        <p class="description">Sędziowie i egzekutorzy krwawego prawa.</p>
     </div>
 
     <div class="section">
         <h2>Strażnik Kodeksu</h2>
-        <div class="role"><div class="role-icon" style="background:#6f42c1"></div> <strong>kalinekmail</strong></div>
-        <p style="font-size: 0.9rem; color: #6f42c1;">Kat dla łamiących zasady.</p>
+        <div class="role">
+            <div class="role-icon" style="background:#6f42c1"></div>
+            <strong>kalinekmail</strong>
+        </div>
+        <p class="description">Kat dla łamiących zasady.</p>
     </div>
 
     <div class="section">
         <h2>Wspólnik</h2>
-        <div class="role"><div class="role-icon" style="background:#198754"></div> <strong>tycha1515</strong></div>
-        <p style="font-size: 0.9rem; color: #198754;">Uznany sojusznik królestwa.</p>
+        <div class="role">
+            <div class="role-icon" style="background:#198754"></div>
+            <strong>tycha1515</strong>
+        </div>
     </div>
-
-    <footer>
-        &copy; 2024 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
-    </footer>
 </div>
 
 </body>
