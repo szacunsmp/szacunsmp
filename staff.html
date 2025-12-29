@@ -8,90 +8,130 @@
     <style>
         .small-logo-text {
             color: #ff0000 !important;
-            text-shadow: 0 0 15px rgba(255, 0, 0, 0.7) !important;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.4) !important;
             font-size: 1.8rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 5px;
+            display: block;
         }
 
         .header-accent {
             border-left: 5px solid #ff0000;
             padding-left: 15px;
-            margin: 40px 0 20px 0;
-            box-shadow: -10px 0 15px -10px rgba(255, 0, 0, 0.5);
-        }
-
-        .header-accent h1 {
-            color: #ffffff;
-            font-size: 1.8rem;
-            margin: 0;
+            margin: 40px 0 25px 0;
         }
 
         .member-card {
             background: #0b0c10;
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.2);
             border-left: 6px solid #ff0000;
-            border-radius: 4px;
             padding: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             gap: 20px;
-            transition: all 0.3s ease;
         }
 
-        .member-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-            background: rgba(255, 0, 0, 0.05);
+        /* NAZWA UŻYTKOWNIKA - BIAŁA */
+        .info strong {
+            color: #ffffff !important;
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 2px;
         }
 
-        .role-circle {
-            width: 15px;
-            height: 15px;
+        /* RANGA - CZERWONA */
+        .info .rank-title {
+            color: #ff0000 !important;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+
+        /* OPIS RANGI - BIAŁY */
+        .info .description {
+            color: #ffffff !important;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
             background: #ff0000;
             border-radius: 50%;
             box-shadow: 0 0 10px #ff0000;
+            flex-shrink: 0;
         }
 
-        .info strong { color: #ffffff; font-size: 1.2rem; }
-        .info p { color: #ff0000; margin: 5px 0 0; font-style: italic; }
+        footer { margin-top: 50px; border-top: 1px solid rgba(255, 0, 0, 0.1); padding-top: 20px; }
     </style>
 </head>
 <body>
+
 <div class="container">
     <header>
-        <a href="index.html" class="btn-back">← POWRÓT DO BRAM</a>
+        <a href="index.html" class="btn-back">← POWRÓT</a>
         <br><br>
         <span class="small-logo-text">SZACUN SMP</span>
     </header>
 
     <div class="header-accent">
-        <h1>ELITA KRÓLESTWA</h1>
+        <h1>ADMINISTRACJA I PARTNERZY</h1>
     </div>
 
     <div class="section">
-        <h2 style="color: #ff0000; font-size: 1rem; letter-spacing: 2px;">I. WŁADCY CIENI</h2>
         <div class="member-card">
-            <div class="role-circle"></div>
-            <div class="info"><strong>pokadigleta</strong><p>Właściciel / Główny architekt świata.</p></div>
-        </div>
-        <div class="member-card">
-            <div class="role-circle"></div>
-            <div class="info"><strong>sp0cona_len1q</strong><p>Właściciel / Strażnik balansu.</p></div>
+            <div class="status-dot"></div>
+            <div class="info">
+                <strong>pokadigleta & sp0cona_len1q</strong>
+                <p class="rank-title">Władca Cieni</p>
+                <div class="description">Najwyższa potęga. Twórca tego świata i pan życia oraz śmierci. Jeśli on ingeruje w Twoją sprawę – nie oczekuj litości. To do niego należy ostatnie słowo.</div>
+            </div>
         </div>
     </div>
 
     <div class="section">
-        <h2 style="color: #ff0000; font-size: 1rem; letter-spacing: 2px;">II. EGZEKUTORZY</h2>
-        <div class="member-card">
-            <div class="role-circle" style="background: #007bff; box-shadow: 0 0 10px #007bff;"></div>
-            <div class="info"><strong>dojadecie123_70632</strong><p>Admin / Egzekutor prawa królestwa.</p></div>
+        <div class="member-card" style="border-left-color: #007bff;">
+            <div class="status-dot" style="background: #007bff; box-shadow: 0 0 10px #007bff;"></div>
+            <div class="info">
+                <strong>dojadecie123_70632</strong>
+                <p class="rank-title">Rada Starszych</p>
+                <div class="description">Sędziowie i egzekutorzy. Zarządzają serwerem i dbają o to, by mechanizm Lifesteal działał bez zakłóceń. To oni rozstrzygają spory i wymierzają najcięższe wyroki.</div>
+            </div>
         </div>
     </div>
 
-    <footer>&copy; 2025 SZACUN SMP. Wybrani przez krew.</footer>
+    <div class="section">
+        <div class="member-card" style="border-left-color: #6f42c1;">
+            <div class="status-dot" style="background: #6f42c1; box-shadow: 0 0 10px #6f42c1;"></div>
+            <div class="info">
+                <strong>kalinekmail</strong>
+                <p class="rank-title">Strażnik Kodeksu</p>
+                <div class="description">Oczy i uszy serwera. Pilnują przestrzegania Kodeksu Krwi. Klucznik bram. To on analizuje Twoją przeszłość i decyduje, czy jesteś godzien otrzymać dostęp do Whitelisty.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="member-card" style="border-left-color: #ffc107;">
+            <div class="status-dot" style="background: #ffc107; box-shadow: 0 0 10px #ffc107;"></div>
+            <div class="info">
+                <strong>tycha1515</strong>
+                <p class="rank-title">Wspólnik</p>
+                <div class="description">Zasłużeni sojusznicy serwera. Ci, którzy wspierają rozwój SZACUN SMP i cieszą się specjalnymi przywilejami w tym bezlitosnym świecie.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>&copy; 2025 SZACUN SMP.</footer>
 </div>
+
 </body>
 </html>
