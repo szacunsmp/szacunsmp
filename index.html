@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZACUN SMP - Krwawe Dziedzictwo</title>
+    <title>SZACUN SMP - Strona Główna</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Nadpisanie stylu dla uzyskania czerwonego podświetlenia */
+        /* Spójny styl z podświetleniem logo */
         .logo-text {
             color: #ff0000 !important;
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4) !important;
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        /* Styl czerwonych akcentów (kreski przy nagłówkach) */
+        /* Akcenty nagłówków */
         .header-accent {
             border-left: 5px solid #ff0000;
             padding-left: 15px;
@@ -27,14 +34,14 @@
             margin: 0;
         }
 
-        /* Wszystkie ramki bocznych boksów na czerwono */
+        /* Kontenery treści w stylu Staff Boxes */
         .content-box {
             background: #0b0c10;
             border: 1px solid rgba(255, 0, 0, 0.3);
             border-radius: 4px;
             padding: 25px;
             margin-bottom: 20px;
-            border-left: 6px solid #ff0000; /* Każda kreska na czerwono */
+            border-left: 6px solid #ff0000; 
             box-shadow: inset 5px 0 10px -5px rgba(255, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -56,19 +63,71 @@
         .content-box p {
             color: #c5c6c7;
             line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Przyciski nawigacyjne */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-base {
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .btn-red {
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+
+        .btn-red:hover {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .btn-blue {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-blue:hover {
+            background: #007bff;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
         }
 
         .quote {
             text-align: center;
             font-style: italic;
             color: #ff0000;
-            margin-top: 35px;
+            margin: 40px 0;
             font-size: 1.2rem;
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
         strong {
             color: #ff0000;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 0, 0, 0.1);
+            padding: 30px 0;
+            color: #454545;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -88,47 +147,47 @@
     <div class="header-accent">
         <h2>Architektura Przetrwania</h2>
     </div>
-    <p>Lifesteal na <strong>SZACUN SMP</strong> to nie tylko gra – to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
+    <p>Lifesteal na <strong>SZACUN SMP</strong> to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
 
     <div class="content-box">
         <h3>Poziom I: Drapieżnik</h3>
-        <p>Tutaj krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę. Nie ma miejsca na litość – jest tylko wieczny głód i walka o każdy oddech.</p>
+        <p>Krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę.</p>
     </div>
 
     <div class="content-box">
         <h3>Poziom II: Strateg</h3>
-        <p>W świecie kruchych sojuszy i wszechobecnej zdrady, miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj swoje wpływy, zanim zostaniesz tylko statystyką w bilansie zgonów.</p>
+        <p>Miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj wpływy, zanim zostaniesz statystyką.</p>
     </div>
 
     <div class="content-box">
         <h3>Poziom III: Legenda</h3>
-        <p>Tylko nieliczni osiągają ten pułap. To etap, gdzie Twoje imię budzi strach na czacie, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o to, by świat zapamiętał Twoje panowanie.</p>
+        <p>Tylko nieliczni osiągają ten pułap. Twoje imię budzi strach, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o panowanie.</p>
     </div>
 
     <div class="header-accent">
         <h2>Droga ku Przeznaczeniu (Whitelist)</h2>
     </div>
-    <p>Bramy <strong>SZACUN SMP</strong> nie stoją otworem dla każdego. Tylko ci, którzy udowodnią swoją wartość, zostaną dopuszczeni przed oblicze Rady. Twój proces inicjacji dzieli się na trzy fazy:</p>
+    <p>Bramy <strong>SZACUN SMP</strong> są zamknięte dla słabych. Proces inicjacji dzieli się na trzy fazy:</p>
 
     <div class="content-box">
         <h3>ETAP I: Przebudzenie Świadomości</h3>
-        <p>Twoja podróż zaczyna się od wiedzy. Musisz zgłębić <code>#🩸┇kodeks-krwi</code> na naszym Discordzie. Nieznajomość prawa na SZACUN SMP jest pierwszym krokiem ku wiecznej banicji.</p>
+        <p>Zgłęb <code>#🩸┇kodeks-krwi</code> na Discordzie. Nieznajomość prawa jest pierwszym krokiem ku wiecznej banicji.</p>
     </div>
 
     <div class="content-box">
         <h3>ETAP II: Próba Filarów</h3>
-        <p>Gdy poczujesz gotowość, otwórz podanie w kategorii <strong>MINECRAFT</strong>. To tutaj staniesz przed botem-egzaminatorem. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane.</p>
+        <p>Otwórz podanie w kategorii MINECRAFT. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane przez Radę.</p>
     </div>
 
     <div class="content-box">
         <h3>ETAP III: Wyrok Strażnika</h3>
-        <p>Ostateczny głos należy do <strong>Administratora</strong>. Twoja historia i czyny zostaną poddane surowej ocenie. Czekaj na werdykt: Dopuszczenie lub Wieczne Wygnanie.</p>
+        <p>Ostateczny głos należy do Administratora. Werdykt jest ostateczny: Dopuszczenie lub Wieczne Wygnanie.</p>
     </div>
 
     <p class="quote">"Wielu puka do bram, lecz tylko nieliczni przechodzą przez próg."</p>
 
     <footer>
-        &copy; 2025 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
+        &copy; 2026 SZACUN SMP. Pamiętaj, komu winien jesteś lojalność.
     </footer>
 </div>
 
