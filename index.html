@@ -11,7 +11,6 @@
             --red-glow: #ff0000;
             --blue-glow: #007bff;
             --purple-glow: #6f42c1;
-            --yellow-glow: #ffc107;
             --text-main: #ffffff;
             --text-dim: #a0a0a0;
         }
@@ -34,7 +33,7 @@
             box-sizing: border-box;
         }
 
-        /* NAGŁÓWEK Z TWOJEGO ZDJĘCIA */
+        /* NAGŁÓWEK */
         header {
             text-align: center;
             margin-bottom: 60px;
@@ -70,11 +69,11 @@
             margin: 0;
         }
 
-        /* NAWIGACJA */
+        /* NAWIGACJA - PRZYWRÓCONO PRZYCISK MAPA */
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-top: 30px;
             flex-wrap: wrap;
         }
@@ -83,17 +82,24 @@
             text-decoration: none;
             color: #fff;
             font-weight: bold;
-            padding: 10px 25px;
+            padding: 12px 25px;
             border-radius: 6px;
             transition: 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
+            border: 1px solid transparent;
         }
 
-        .nav-staff { background: var(--red-glow); box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); }
-        .nav-discord { background: var(--blue-glow); box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); }
+        .nav-staff { border-color: var(--red-glow); color: var(--red-glow); }
+        .nav-staff:hover { background: var(--red-glow); color: #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
 
-        /* SIATKA KART Z TWOJEGO ZDJĘCIA */
+        .nav-discord { border-color: var(--blue-glow); color: var(--blue-glow); }
+        .nav-discord:hover { background: var(--blue-glow); color: #fff; box-shadow: 0 0 15px rgba(0, 123, 255, 0.4); }
+
+        .nav-map { border-color: var(--red-glow); color: var(--red-glow); }
+        .nav-map:hover { background: var(--red-glow); color: #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
+
+        /* KARTY TREŚCI */
         .content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -107,15 +113,13 @@
             padding: 40px;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* ELEMENTY STYLU Z IMAGE_787525.PNG */
         .card-header {
             display: flex;
             align-items: center;
@@ -136,24 +140,12 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #ffffff !important; /* Naprawa widoczności tekstu */
+            color: #ffffff !important;
         }
 
-        .card h2 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-        }
+        .card h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; }
+        .card p { color: var(--text-dim); line-height: 1.6; margin: 0; }
 
-        .card p {
-            color: var(--text-dim);
-            line-height: 1.6;
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        /* KOLORY KART ZGODNE Z PRZESŁANYMI MATERIAŁAMI */
         .card-red { border-left: 4px solid var(--red-glow); }
         .card-red .status-dot { background: var(--red-glow); box-shadow: 0 0 8px var(--red-glow); }
         .card-red .rank-label { background: var(--red-glow); }
@@ -162,26 +154,21 @@
         .card-blue .status-dot { background: var(--blue-glow); box-shadow: 0 0 8px var(--blue-glow); }
         .card-blue .rank-label { background: var(--blue-glow); }
 
-        .card-purple { border-left: 4px solid var(--purple-glow); }
-        .card-purple .status-dot { background: var(--purple-glow); box-shadow: 0 0 8px var(--purple-glow); }
-        .card-purple .rank-label { background: var(--purple-glow); }
-
-        footer {
-            margin-top: 100px;
-            padding: 40px;
-            color: #444;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
+        footer { margin-top: 80px; padding: 40px; color: #444; font-size: 0.8rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <a href="#" class="btn-back">← POWRÓT</a> <h1 class="logo-text">SZACUN SMP</h1> <div class="nav-links">
-            <a href="staff.html" class="nav-btn nav-staff">Personel</a>
+        <a href="#" class="btn-back">← POWRÓT</a>
+        <h1 class="logo-text">SZACUN SMP</h1>
+        
+        <div class="nav-links">
+            <a href="staff.html" class="nav-btn nav-staff">Staff</a>
             <a href="https://discord.gg/DHjrSKsXF2" class="nav-btn nav-discord">Discord</a>
+            <a href="regulamin.html" class="nav-btn nav-discord">Regulamin</a>
+            <a href="http://5.252.100.184:25403" class="nav-btn nav-map" target="_blank">Mapa</a>
         </div>
     </header>
 
@@ -192,7 +179,7 @@
                 <div class="rank-label">Lifesteal</div>
             </div>
             <h2>Architektura Przetrwania</h2>
-            <p>Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt. Krew jest jedyną walutą, która ma tutaj znaczenie.</p>
+            <p>Każde zabójstwo buduje Twoją potęgę. Krew jest jedyną walutą, która ma tutaj znaczenie.</p>
         </div>
 
         <div class="card card-blue">
@@ -201,16 +188,7 @@
                 <div class="rank-label">Whitelist</div>
             </div>
             <h2>Droga ku Przeznaczeniu</h2>
-            <p>Bramy serwera są zamknięte dla niegodnych. Tylko ci, którzy przejdą proces weryfikacji na Discordzie, zasiądą przy wspólnym stole.</p>
-        </div>
-
-        <div class="card card-purple">
-            <div class="card-header">
-                <div class="status-dot"></div>
-                <div class="rank-label">Zasady</div>
-            </div>
-            <h2>Kodeks Krwi</h2>
-            <p>Szanuj sojuszników, miażdż wrogów. Nieznajomość regulaminu jest pierwszym krokiem do wiecznego wygnania.</p>
+            <p>Bramy serwera są zamknięte dla niegodnych. Tylko zweryfikowani gracze zasiądą przy wspólnym stole.</p>
         </div>
     </div>
 
