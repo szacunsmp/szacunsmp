@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SZACUN SMP - Strona Główna</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* Spójny styl z podświetleniem logo */
+        body {
+            background-color: #0f0f12;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* NAGŁÓWEK I LOGO */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
         .logo-text {
             color: #ff0000 !important;
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4) !important;
@@ -15,64 +33,15 @@
             text-transform: uppercase;
             letter-spacing: 10px;
             display: block;
-            text-align: center;
             margin-bottom: 30px;
         }
 
-        /* Akcenty nagłówków */
-        .header-accent {
-            border-left: 5px solid #ff0000;
-            padding-left: 15px;
-            margin: 40px 0 20px 0;
-            box-shadow: -10px 0 15px -10px rgba(255, 0, 0, 0.5);
-        }
-
-        .header-accent h2 {
-            color: #ffffff;
-            text-transform: uppercase;
-            font-size: 1.8rem;
-            margin: 0;
-        }
-
-        /* Kontenery treści w stylu Staff Boxes */
-        .content-box {
-            background: #0b0c10;
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            border-radius: 4px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 6px solid #ff0000; 
-            box-shadow: inset 5px 0 10px -5px rgba(255, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .content-box:hover {
-            transform: translateX(5px);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-            border-color: #ff0000;
-        }
-
-        .content-box h3 {
-            color: #ff0000;
-            margin-top: 0;
-            text-transform: uppercase;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-        }
-
-        .content-box p {
-            color: #c5c6c7;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* Przyciski nawigacyjne */
+        /* PRZYCISKI NAWIGACJI */
         .btn-group {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin-bottom: 40px;
         }
 
         .btn-base {
@@ -86,46 +55,85 @@
             border: 1px solid transparent;
         }
 
-        .btn-red {
-            color: #ff0000;
+        .btn-red { color: #ff0000; border-color: #ff0000; }
+        .btn-red:hover { background: #ff0000; color: #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
+
+        .btn-blue { color: #007bff; border-color: #007bff; }
+        .btn-blue:hover { background: #007bff; color: #fff; box-shadow: 0 0 15px rgba(0, 123, 255, 0.4); }
+
+        /* AKCENTY NAGŁÓWKÓW */
+        .header-accent {
+            border-left: 5px solid #ff0000;
+            padding-left: 15px;
+            margin: 40px 0 25px 0;
+            box-shadow: -10px 0 15px -10px rgba(255, 0, 0, 0.5);
+        }
+
+        .header-accent h2 {
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* BOKSY TREŚCI (CONTENT BOX) */
+        .content-box {
+            background: #16171b;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 6px solid #ff0000;
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateX(8px);
             border-color: #ff0000;
         }
 
-        .btn-red:hover {
+        /* ETYKIETY (NAPRAWIONA WIDOCZNOŚĆ) */
+        .badge {
+            display: inline-block;
             background: #ff0000;
-            color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            color: #ffffff !important; /* Wymuszony biały tekst */
+            padding: 4px 15px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        .btn-blue {
-            color: #007bff;
-            border-color: #007bff;
+        .content-box h3 {
+            color: #ffffff;
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-        .btn-blue:hover {
-            background: #007bff;
-            color: #fff;
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+        .content-box p {
+            color: #c5c6c7;
+            margin: 0;
         }
 
         .quote {
             text-align: center;
             font-style: italic;
             color: #ff0000;
-            margin: 40px 0;
+            margin: 50px 0;
             font-size: 1.2rem;
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        strong {
-            color: #ff0000;
-        }
+        strong { color: #ff0000; }
 
         footer {
-            margin-top: 60px;
             text-align: center;
+            margin-top: 80px;
+            padding: 30px;
             border-top: 1px solid rgba(255, 0, 0, 0.1);
-            padding: 30px 0;
             color: #454545;
             font-size: 0.8rem;
         }
@@ -150,38 +158,31 @@
     <p>Lifesteal na <strong>SZACUN SMP</strong> to brutalna selekcja naturalna. Każde zabójstwo buduje Twoją potęgę, a każdy zgon spycha Cię w niebyt.</p>
 
     <div class="content-box">
-        <h3>Poziom I: Drapieżnik</h3>
+        <div class="badge">Poziom I</div>
+        <h3>Drapieżnik</h3>
         <p>Krew jest jedyną stabilną walutą. Każde zdobyte serce to kolejny stopień na drodze do dominacji. Wyrywasz cząstkę istnienia swoim wrogom, by karmić własną potęgę.</p>
     </div>
 
     <div class="content-box">
-        <h3>Poziom II: Strateg</h3>
+        <div class="badge">Poziom II</div>
+        <h3>Strateg</h3>
         <p>Miecz to za mało. Musisz budować fortece, które wytrzymają oblężenia, i zawierać pakty, które zerwiesz pierwszy. Rozwijaj wpływy, zanim zostaniesz statystyką.</p>
-    </div>
-
-    <div class="content-box">
-        <h3>Poziom III: Legenda</h3>
-        <p>Tylko nieliczni osiągają ten pułap. Twoje imię budzi strach, a Twoja obecność zmienia losy bitew. Na tym poziomie nie walczysz już o serca – walczysz o panowanie.</p>
     </div>
 
     <div class="header-accent">
         <h2>Droga ku Przeznaczeniu (Whitelist)</h2>
     </div>
-    <p>Bramy <strong>SZACUN SMP</strong> są zamknięte dla słabych. Proces inicjacji dzieli się na trzy fazy:</p>
 
     <div class="content-box">
-        <h3>ETAP I: Przebudzenie Świadomości</h3>
-        <p>Zgłęb <code>#🩸┇kodeks-krwi</code> na Discordzie. Nieznajomość prawa jest pierwszym krokiem ku wiecznej banicji.</p>
+        <div class="badge">Etap I</div>
+        <h3>Przebudzenie</h3>
+        <p>Zgłęb <strong>#🩸┇kodeks-krwi</strong> na Discordzie. Nieznajomość prawa na SZACUN SMP jest pierwszym krokiem ku wiecznej banicji.</p>
     </div>
 
     <div class="content-box">
-        <h3>ETAP II: Próba Filarów</h3>
-        <p>Otwórz podanie w kategorii MINECRAFT. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane przez Radę.</p>
-    </div>
-
-    <div class="content-box">
-        <h3>ETAP III: Wyrok Strażnika</h3>
-        <p>Ostateczny głos należy do Administratora. Werdykt jest ostateczny: Dopuszczenie lub Wieczne Wygnanie.</p>
+        <div class="badge">Etap II</div>
+        <h3>Próba Filarów</h3>
+        <p>Otwórz podanie w kategorii <strong>MINECRAFT</strong>. Twoje odpowiedzi muszą być przemyślane – każde słowo jest analizowane przez Radę.</p>
     </div>
 
     <p class="quote">"Wielu puka do bram, lecz tylko nieliczni przechodzą przez próg."</p>
