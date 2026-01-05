@@ -3,180 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZACUN SMP</title>
+    <title>DIGLETT</title>
     <style>
         :root {
-            --bg-color: #0d0d0f;
-            --card-bg: #16161a;
             --red-glow: #ff0000;
-            --blue-glow: #007bff;
-            --purple-glow: #6f42c1;
+            --card-bg: #16161a;
             --text-main: #ffffff;
             --text-dim: #a0a0a0;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: white;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             width: 100%;
-            padding: 60px 20px;
-            box-sizing: border-box;
-        }
-
-        /* NAGŁÓWEK - USUNIĘTO PRZYCISK POWRÓT */
-        header {
             text-align: center;
-            margin-bottom: 70px;
         }
 
-        .logo-text {
-            color: var(--red-glow);
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.3);
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 15px;
             font-weight: 900;
-            letter-spacing: 12px;
-            text-transform: uppercase;
-            margin: 0;
-            display: block;
+            text-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
 
-        /* NAWIGACJA - WYPEŁNIONE PRZYCISKI */
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .nav-btn {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 14px 35px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            border: none;
-            display: inline-block;
-        }
-
-        .nav-staff { 
-            background: var(--red-glow); 
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); 
-        }
-        .nav-staff:hover { 
-            background: #cc0000; 
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); 
-        }
-
-        .nav-discord { 
-            background: var(--blue-glow); 
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); 
-        }
-        .nav-discord:hover { 
-            background: #0056b3; 
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0, 123, 255, 0.5); 
-        }
-
-        .nav-map { 
-            background: var(--blue-glow); 
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.3); 
-        }
-        .nav-map:hover { 
-            background: #004da3; 
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0, 123, 255, 0.5); 
-        }
-
-        /* KARTY TREŚCI */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .card {
+        /* STYL KARTY Z OBRAZKA */
+        .status-card {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 45px;
-            position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: all 0.4s ease;
+            padding: 40px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
         }
 
-        .card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-header {
-            display: flex;
+        .card-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             margin-bottom: 25px;
         }
 
-        .status-dot {
-            width: 10px;
-            height: 10px;
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--red-glow);
             border-radius: 50%;
+            box-shadow: 0 0 15px var(--red-glow);
+            animation: pulse 2s infinite;
         }
 
-        .rank-label {
-            padding: 7px 22px;
-            border-radius: 5px;
-            font-size: 0.8rem;
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .badge-text {
+            background: var(--red-glow);
+            padding: 5px 15px;
+            border-radius: 6px;
             font-weight: 900;
             text-transform: uppercase;
+            font-size: 0.85rem;
             letter-spacing: 1px;
-            color: #ffffff !important;
         }
 
-        .card h2 { 
-            font-size: 2rem; 
-            font-weight: 800; 
-            margin: 0 0 15px 0;
-            letter-spacing: -0.5px;
+        .status-card h2 {
+            font-size: 2.5rem;
+            margin: 0 0 20px 0;
+            font-weight: 800;
         }
 
-        .card p { 
-            color: var(--text-dim); 
-            line-height: 1.7; 
-            font-size: 1.05rem; 
-            margin: 0; 
+        .status-card p {
+            color: var(--text-dim);
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
-        .card-red { border-left: 5px solid var(--red-glow); }
-        .card-red .status-dot { background: var(--red-glow); box-shadow: 0 0 10px var(--red-glow); }
-        .card-red .rank-label { background: var(--red-glow); }
+        .status-card ul {
+            color: var(--text-dim);
+            padding-left: 20px;
+            line-height: 1.8;
+        }
 
-        .card-blue { border-left: 5px solid var(--blue-glow); }
-        .card-blue .status-dot { background: var(--blue-glow); box-shadow: 0 0 10px var(--blue-glow); }
-        .card-blue .rank-label { background: var(--blue-glow); }
+        /* PRZYCISKI Z LINKAMI */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-        footer { 
-            margin-top: 100px; 
-            padding: 50px; 
-            color: #333; 
-            font-size: 0.85rem; 
-            letter-spacing: 3px; 
-            text-align: center;
+        .btn {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            min-width: 160px;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.2);
+        }
+
+        .btn-discord { background: #5865F2; box-shadow: 0 5px 15px rgba(88,101,242,0.4); }
+        .btn-youtube { background: #FF0000; box-shadow: 0 5px 15px rgba(255,0,0,0.4); }
+
+        footer {
+            margin-top: 40px;
+            color: #444;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
     </style>
@@ -184,35 +151,32 @@
 <body>
 
 <div class="container">
-    <header>
-        <h1 class="logo-text">SZACUN SMP</h1>
+    <h1>DIGLETT</h1>
+
+    <div class="status-card">
+        <div class="card-badge">
+            <div class="dot"></div>
+            <div class="badge-text">SZACUN SMP</div>
+        </div>
         
-        <div class="nav-links">
-            <a href="staff.html" class="nav-btn nav-staff">Staff</a>
-            <a href="https://discord.gg/DHjrSKsXF2" class="nav-btn nav-discord" target="_blank">Discord</a>
-            <a href="regulamin.html" class="nav-btn nav-discord">Regulamin</a>
-            <a href="http://5.252.100.184:25403" class="nav-btn nav-map" target="_blank">Mapa</a>
-        </div>
-    </header>
+        <h2>Informacja o zamknięciu</h2>
+        
+        <p>Z przykrością informujemy, że podjęliśmy decyzję o zamknięciu serwera Lifesteal. Wynika to z kilku kluczowych powodów:</p>
+        
+        <ul>
+            <li><strong>Niska aktywność:</strong> Frekwencja w ostatnim czasie mocno spadła.</li>
+            <li><strong>Problemy wewnętrzne:</strong> Nieustanne konflikty, dramy oraz skargi uniemożliwiały spokojne prowadzenie projektu.</li>
+        </ul>
 
-    <div class="content-grid">
-        <div class="card card-red">
-            <div class="card-header">
-                <div class="status-dot"></div>
-                <div class="rank-label">Lifesteal</div>
-            </div>
-            <h2>Architektura Przetrwania</h2>
-            <p>Najbardziej brutalna forma rozgrywki. Każde zabójstwo to Twój zysk, każdy zgon to realna strata. Buduj imperium na fundamentach z serc swoich wrogów.</p>
-        </div>
+        <p><strong>Co dalej?</strong> Zmieniamy format. Tworzymy nowy serwer na paczce <strong>Better MC 5</strong>. Będzie to projekt zamknięty dla administracji i znajomych. Zapraszamy na streamy, aby śledzić nasze postępy!</p>
+        
+        <p style="margin-top: 20px; font-style: italic; color: #fff;">SZACUN SMP, Pamiętaj komu wisisz szacun</p>
+    </div>
 
-        <div class="card card-blue">
-            <div class="card-header">
-                <div class="status-dot"></div>
-                <div class="rank-label">Whitelist</div>
-            </div>
-            <h2>Droga ku Przeznaczeniu</h2>
-            <p>Nasza społeczność opiera się na jakości, nie ilości. Przejdź proces weryfikacji na Discordzie i dołącz do elitarnego grona graczy SZACUN SMP.</p>
-        </div>
+    <div class="button-group">
+        <a href="https://discord.gg/DHjrSKsXF2" class="btn btn-discord" target="_blank">DIGLECIKI</a>
+        <a href="https://youtube.com/@pokadigleta" class="btn btn-youtube" target="_blank">YOUTUBE</a>
+        <a href="https://discord.gg/ZAUzwAR3eW" class="btn btn-discord" target="_blank">TRZEJ MUSZKIETEROWIE</a>
     </div>
 
     <footer>
