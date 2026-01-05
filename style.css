@@ -1,8 +1,8 @@
 :root {
-    --red-glow: #ff0000;
-    --card-bg: #16161a;
+    --red-glow: #ff0055; /* Nieco bardziej różowy odcień czerwieni dla spójności */
+    --card-bg: rgba(22, 22, 26, 0.9); /* Lekka przezroczystość, by tło przebijało */
     --text-main: #ffffff;
-    --text-dim: #a0a0a0;
+    --text-dim: #d1d1d1;
     --discord-color: #5865F2;
     --youtube-color: #FF0000;
 }
@@ -14,14 +14,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0d0d0f, #1a1a2e, #16213e);
+    /* Kolorowe tło: Fiolet, Róż, Niebieski */
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #ff0080, #7928ca);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    animation: gradientBG 12s ease infinite;
     font-family: 'Inter', sans-serif;
     color: var(--text-main);
     padding: 20px;
 }
 
+/* Animacja płynącego tła */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -32,6 +34,7 @@ body {
     max-width: 850px;
     width: 100%;
     text-align: center;
+    z-index: 1;
 }
 
 h1 {
@@ -40,18 +43,20 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 15px;
     font-weight: 900;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+    /* Efekt poświaty napisu */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 40px rgba(106, 17, 203, 0.6);
 }
 
-/* KARTA STYLISTYKA Z OBRAZKA */
+/* KARTA - Dodano efekt Glassmorphism */
 .status-card {
     background: var(--card-bg);
     border-radius: 24px;
     padding: 50px;
     text-align: left;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
+    backdrop-filter: blur(10px); /* Rozmycie tła pod kartą */
 }
 
 .card-badge {
@@ -83,6 +88,7 @@ h1 {
     font-weight: 900;
     text-transform: uppercase;
     font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
 }
 
 .status-card h2 {
@@ -113,10 +119,11 @@ h1 {
 .footer-note {
     margin-top: 40px;
     font-style: italic;
-    color: white !important;
+    color: #fff !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
     font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 /* PRZYCISKI */
@@ -138,6 +145,8 @@ h1 {
     font-size: 1rem;
     letter-spacing: 2px;
     min-width: 180px;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -146,22 +155,21 @@ h1 {
 
 .btn-discord { 
     background: var(--discord-color); 
-    box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3); 
+    box-shadow: 0 10px 25px rgba(88, 101, 242, 0.4); 
 }
 
 .btn-youtube { 
     background: var(--youtube-color); 
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3); 
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4); 
 }
 
 .site-footer {
     margin-top: 60px;
-    color: #333;
+    color: rgba(255, 255, 255, 0.3);
     font-size: 0.85rem;
     letter-spacing: 4px;
 }
 
-/* MOBILNE DOPASOWANIE */
 @media (max-width: 600px) {
     .status-card { padding: 30px; }
     h1 { font-size: 3rem; letter-spacing: 5px; }
